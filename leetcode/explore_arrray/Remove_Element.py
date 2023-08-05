@@ -1,7 +1,9 @@
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        return sum([1 for num in nums if num != val])
-
-
-# 明日やろう
-# 今日は疲れにより早めに休む
+        # prepare pointer
+        p1 = 0
+        for p2 in range(len(nums)):
+            if nums[p2] != val:
+                nums[p1] = nums[p2]
+                p1 += 1
+        return p1
