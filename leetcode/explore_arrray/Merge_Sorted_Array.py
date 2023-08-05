@@ -4,9 +4,9 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        # ポインタ3つ用意
+        # prepare three pointer
         p, p1, p2 = m + n - 1, m - 1, n - 1
-        # 条件分岐
+        # confirm pointer existence
         while p1 >= 0 and p2 >= 0:
             if nums1[p1] >= nums2[p2]:
                 nums1[p] = nums1[p1]
